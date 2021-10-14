@@ -1,0 +1,8 @@
+export const SET_IS_BLOG_RENDER_COMPLETE = 'setIsBlogRenderComplete'
+export const SET_PARENT_COMMENT_ID = 'setParentCommentId'
+export const SET_BLOG_ID = 'setBlogId'
+export const SAVE_COMMENT_RESULT = 'saveCommentResult'
+export const SET_REPLAY_ID = 'setReplayId'
+export const RESET_COMMENT_FORM = 'resetCommentForm'
+export const RESTORE_COMMENT_FORM = 'restoreCommentForm'
+export const SET_FORM_ID = 'setFormId'

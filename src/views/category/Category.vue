@@ -31,7 +31,6 @@ export default {
     // 获取列表数据
     async getBlogList(){
       const res =  await getBlogs(this.queryInfo)
-      // console.log(res)
       this.blogList = res.data.blogs
       this.total = res.data.totalpage
     },
@@ -53,8 +52,6 @@ export default {
   created(){
     this.queryInfo.category = this.$route.params.cate
     this.getBlogList()
-    // console.log(this.$route.params.cate)
-    // console.log(this.$route)
   },
   components:{
     BlogList

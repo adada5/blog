@@ -32,11 +32,8 @@ export default {
     async getBlogList(){
       console.log(this.queryInfo.tag)
       const res =  await getBlogs(this.queryInfo)
-      // console.log(res)
       this.blogList = res.data.blogs
       this.total = res.data.totalpage
-      console.log(this.blogList)
-      // console.log(this.total)
     },
     // 监听页码改变的事件
     handleCurrentChange(newPage){
@@ -57,7 +54,6 @@ export default {
   created(){
     this.queryInfo.tag = this.$route.params.tag
     this.getBlogList()
-    // console.log(this.$route.params.cate)
     console.log(this.$route)
   },
   components:{

@@ -68,12 +68,6 @@ export default {
       this.$router.push(`/blog/${id}`)  
     }
   },
-  created(){
-    // this.tags = this.blog.tag.split(',')
-  },
-  watch:{
-   
-  },
   computed:{
     tags(){
       return this.blog.tag.split(',')

@@ -2,8 +2,8 @@
 	<div class="ui inverted attached segment m-padded-tb-no m-shadow-small">
 		<div class="ui container">
       <div class="ui inverted secondary stackable menu">
-				<router-link to="/"><h2 class="ui teal header item">{{blogName}}</h2></router-link>
-        
+				<!-- 导航 -->
+				<router-link to="/"><h2 class="ui teal header item">{{blogName}}</h2></router-link> 
         <router-link to="/home" class="m-item item" :class="{'m-mobile-hide': mobileHide ,'active':$route.name==='home'}"> <i class="home icon"></i> 首页</router-link>
 				<el-dropdown  trigger="click" @command="categoryRoute" class="m-item item" :class="{'m-mobile-hide': mobileHide ,'active':$route.name==='category'}">
 					<span class="el-dropdown-link">
@@ -17,7 +17,7 @@
 				<router-link to="/moments" class="m-item item" :class="{'m-mobile-hide': mobileHide,'active':$route.name==='moments'}"> <i class="comment alternate outline icon"></i>动态</router-link>
         <router-link to="/about" class="m-item item" :class="{'m-mobile-hide': mobileHide,'active':$route.name==='about'}"> <i class="info icon"></i>关于我</router-link>
 
-				
+				<!-- 收索框 -->
 				<el-autocomplete v-model="queryString" :fetch-suggestions="debounceQuery" placeholder="Search..."
 			                 class="right item m-search " :class="{'m-mobile-hide': mobileHide}"
 			                 popper-class="m-search-item" @select="handleSelect">
@@ -29,6 +29,7 @@
 
       </div>
     </div> 
+		<!-- 移动端展开导航 -->
     <a href="#" class="ui m-menu m-toggle black icon button m-right-top m-mobile-show" @click="sidebarClick">
       <i class="sidebar icon"></i>
     </a>
@@ -56,21 +57,23 @@
 				}; 
 		},
 		methods:{
+			// 移动端导航展开切换
 			sidebarClick(){
 				this.mobileHide = !this.mobileHide
 			},
 			categoryRoute(name) {
-				// console.log(this.$route);
-				// console.log(this.$route.path.indexOf(name));
 				//防止重复路由跳转同一个分类地址
 				if(this.$route.path.indexOf(name) == -1)
 				this.$router.push(`/category/${name}`)
 			},
+			// 防抖
 			debounceQuery(queryString, callback) {
 				this.timer && clearTimeout(this.timer)
 				this.timer = setTimeout(() => this.querySearchAsync(queryString, callback), 1000)
 			},
+			// 收索请求
 			querySearchAsync(queryString, callback) {
+				// 预处理
 				if (queryString == null 
 						|| queryString.trim() === ''
 						|| queryString.indexOf('%') !== -1
@@ -92,6 +95,7 @@
 					}
 				})
 			},
+			// 处理点击事件
 			handleSelect(item) {
 				if (item._id) {
 					this.$router.push(`/blog/${item._id}`)

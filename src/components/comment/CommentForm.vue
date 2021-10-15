@@ -46,7 +46,6 @@ export default {
         ],
         email: [
           {required: true, message: '请输入评论邮箱'},
-          // {validator: checkEmail}
         ],
       },
     }
@@ -55,6 +54,7 @@ export default {
 		postForm(){
 			this.$store.dispatch('submitCommentForm')
 		},
+		// 重置id
 		setId(){
 			this.$store.commit(SET_FORM_ID, '-1')
 		}

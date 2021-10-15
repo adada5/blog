@@ -21,8 +21,7 @@
 							</div>
 							<div class="item m-common-black">
 								<i class="small clock icon"></i><span>阅读时长≈{{ blog.readTime }}分</span>
-							</div>
-							
+							</div>	
 						</div>	
 					</div>
 
@@ -120,10 +119,10 @@ export default {
 				if(res.meta.status === 200){
 					this.blog = res.data
 					this.tags = res.data.tag.split(',')
-					console.log(this.blog)
+					
 					//v-html渲染完毕后，渲染代码块样式
 					this.$nextTick(() => {
-						//添加id
+						//添加标题id，方便目录跳转
 						const h1 = document.querySelectorAll('.js-toc-content h1')	
 						const h2 = document.querySelectorAll('.js-toc-content h2')
 						const h3 = document.querySelectorAll('.js-toc-content h3')

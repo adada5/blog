@@ -79,9 +79,9 @@ export default {
 		CommentList
 	},
 	computed: {
-			blogId() {
-				return this.$route.params.id
-			},
+		blogId() {
+			return this.$route.params.id
+		},
 	},
 	beforeRouteEnter(to, from, next) {
 		//路由到博客文章页面之前，应将文章的渲染完成状态置为 false

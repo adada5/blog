@@ -11,6 +11,7 @@ import { SET_PARENT_COMMENT_ID,SET_BLOG_ID } from '@/store/mutations-types';
 export default {
   components: {Comment},
   props: {
+    // 关于我页面blogId为null，Object类型
     blogId: {
       type: String | Object,
       required: true

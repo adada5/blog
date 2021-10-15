@@ -1,6 +1,5 @@
 import { 
 	SET_PARENT_COMMENT_ID,
-	SET_BLOG_ID,
 	SAVE_COMMENT_RESULT,
   RESET_COMMENT_FORM
 } from './mutations-types'

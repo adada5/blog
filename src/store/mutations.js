@@ -10,18 +10,22 @@ import {
 } from './mutations-types'
 
 export default {
+	// 设置博客文章渲染完成
   [SET_IS_BLOG_RENDER_COMPLETE](state, ok) {
 		state.isBlogRenderComplete = ok
 	},
 	
+	// 设置主评论的id
 	[SET_PARENT_COMMENT_ID](state, parentCommentId) {
 		state.parentCommentId = parentCommentId
 	},
 	
+	// 设置博客id
 	[SET_BLOG_ID](state, id) {
 		state.blogId = id
 	},
 
+	// 保存评论列表
 	[SAVE_COMMENT_RESULT](state, data) {
 		state.comments = data
 	},
@@ -45,6 +49,7 @@ export default {
 		state.formId = '-1'
 	},
 
+	// 从localStorage拿到nickname email
 	[RESTORE_COMMENT_FORM](state) {
 		const lastForm = JSON.parse(window.localStorage.getItem('commentForm'))
 		if (lastForm) {

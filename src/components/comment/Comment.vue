@@ -4,6 +4,7 @@
     <!--评论列表-->
     <div>
       <h3 class="ui dividing header">评论区</h3>
+			<!-- 主评论 -->
       <div class="comment" v-for="comment in comments" :key="comment._id">
         <span class="anchor" :id="`comment-${comment._id}`"></span>
         <a class="ui circular image avatar">
@@ -17,6 +18,7 @@
           <el-button size="mini" type="primary" @click="setReplay(comment._id,comment.from._id,comment._id)">回复</el-button>
           <div class="text" v-html="comment.content"></div>
         </div>
+				<!-- 回复评论 -->
         <div class="comments" v-if="comment.replay.length>0">
           <div class="comment" v-for="replay in comment.replay" :key="replay._id">
             <span class="anchor"></span>
@@ -29,7 +31,7 @@
                 <strong class="date">{{ replay.createTime | dateFormat('YYYY-MM-DD HH:mm') }}</strong>
               </div>
               <div class="text">
-                <a href="">@{{ replay.to.nickname }}</a>
+                <a target="_blank">@{{ replay.to.nickname }}</a>
                 <div>{{replay.content}}</div>
               </div>
               <div class="actions">

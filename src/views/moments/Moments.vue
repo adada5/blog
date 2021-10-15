@@ -1,8 +1,11 @@
 <template>
   <div>
+		<!-- 头部区域 -->
 		<div class="ui top attached segment" style="text-align: center">
 			<h2 class="m-text-500">我的动态</h2>
 		</div>
+
+		<!-- 动态主体 -->
 		<div class="ui attached segment m-padding-bottom-large">
 			<div class="moments">
 				<div class="moment" v-for="(moment,index) in moments" :key="index">
@@ -24,6 +27,7 @@
 				</div>
 			</div>	
 
+			<!-- 分页 -->
 			<el-pagination @current-change="handleCurrentChange" :current-page="queryInfo.pagenum" :page-size="queryInfo.pagesize" :total="total" layout="prev, pager, next" background class="pagination">
 			</el-pagination>
 		</div>

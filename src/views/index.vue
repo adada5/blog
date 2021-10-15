@@ -9,6 +9,7 @@
 					<div class="ui stackable grid">
 						<!--左侧-->
 						<div class="three wide column m-mobile-hide">
+							<!-- 个人介绍 -->
 							<Introduction />
 						</div>
 						<!--中间-->
@@ -19,6 +20,7 @@
 						</div>
 						<!--右侧-->
 						<div class="three wide column m-mobile-hide">
+							<!-- 云标签 -->
 							<tags :tagList='tagList'></tags>
               <!--只在文章页面显示目录-->
 							<Tocbot v-if="$route.name==='Blog'"/>
@@ -28,6 +30,7 @@
 			</div>
 		</div>
    
+	 	<!-- 底部 -->
     <Footer></Footer>
   </div>
 </template>

@@ -5,7 +5,7 @@
     <div>
       <h3 class="ui dividing header">评论区</h3>
       <div class="comment" v-for="comment in comments" :key="comment._id">
-        <span class="anchor" :id="`comment-${comment.id}`"></span>
+        <span class="anchor" :id="`comment-${comment._id}`"></span>
         <a class="ui circular image avatar">
 					<img :src='comment.from.img'>
         </a>
@@ -50,6 +50,7 @@
 import {mapState} from 'vuex'
 import CommentForm from './CommentForm.vue'
 import { SET_REPLAY_ID,SET_FORM_ID } from '@/store/mutations-types'
+
 export default {
   components: {CommentForm},
   computed: {
@@ -59,6 +60,7 @@ export default {
 		//id主评论的id to为该被回复评论的游客 formId保存回复对应评论的id
 		setReplay(id,to,formId){
 			this.$store.commit(SET_REPLAY_ID,{id,to})
+			// 可用于设置评论框出现的位置
 			this.$store.commit(SET_FORM_ID,formId)
 		}
 	},

@@ -34,8 +34,6 @@ export default {
       // console.log(res)
       this.blogList = res.data.blogs
       this.total = res.data.totalpage
-      // console.log(this.blogList)
-      // console.log(this.total)
     },
     // 监听页码改变的事件
     handleCurrentChange(newPage){

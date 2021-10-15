@@ -29,8 +29,8 @@ function removeScipt(_id) {
 function fetchJsonp(_url, params = {}, options = {}) {
   return new Promise((resolve, reject) => {
     const jsonp = options.callback || config.callback,
-      cb = generateCB(), // get callback function name
-      scriptId = cb;
+    cb = generateCB(), // get callback function name
+    scriptId = cb;
 
     let query = [];
     Object.keys(params).forEach(key => {

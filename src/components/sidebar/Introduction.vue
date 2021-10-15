@@ -2,13 +2,14 @@
   <div>
 		<div class="ui segments m-box">
 			<div class="ui card">
+				<!-- 头像 -->
 				<div class="image">
 					<img src="http://127.0.0.1:2020/public/869343762461114766.jpg">
 				</div>
 				<div class="content" align="center">
 					<div class="header">adada5</div>
-					
 				</div>
+				<!-- 链接 -->
 				<div class="extra content" align="center">
           <!-- github -->
           <a href="https://github.com/adada5"  target="_blank" class="ui circular icon button">
@@ -41,15 +42,13 @@
 						</svg>
 					</a>
           <!-- email -->
-					<a href="mailto:2512232367@qq.com" class="ui circular icon button">
+					<a href="mailto:2512232367@qq.com" target="_blank" class="ui circular icon button">
 						<svg style="width: 1em!important;height: 1em!important;" t="1588659775989" class="icon" viewBox="0 0 1365 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="24547" width="200" height="200">
 							<path d="M684.00064 607.733333L1282.005973 9.728A133.077333 133.077333 0 0 0 1232.00064 0h-1098.666667c-16.938667 0-33.205333 3.2-48.138666 8.938667l598.805333 598.794666z" p-id="24548"></path>
 							<path d="M684.00064 728.394667l-664.533333-664.533334A132.48 132.48 0 0 0 0.00064 133.333333v757.333334C0.00064 964.266667 59.733973 1024 133.333973 1024h1098.666667c73.6 0 133.333333-59.733333 133.333333-133.333333v-757.333334a133.013333 133.013333 0 0 0-18.528-67.733333L684.00064 728.394667z" p-id="24549"></path>
 						</svg>
 					</a>
-				</div>
-				
-				</div>
+				</div>		
 			</div>
 		</div>
 	</div>

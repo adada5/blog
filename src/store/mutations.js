@@ -25,12 +25,14 @@ export default {
 	[SAVE_COMMENT_RESULT](state, data) {
 		state.comments = data
 	},
- 
+	
+	// 设置回复评论的
 	[SET_REPLAY_ID](state, payload) {
 		state.parentCommentId = payload.id
 		state.commentForm.to = payload.to
 	},
 
+	// 重置回复框内容，保存访客信息
 	[RESET_COMMENT_FORM](state) {
 		const commentForm = {
 			nickname: state.commentForm.nickname,
@@ -51,6 +53,7 @@ export default {
 		}
 	},
 
+	// 设置评论框出现的位置
 	[SET_FORM_ID](state, id) {
 		state.formId = id
 	},

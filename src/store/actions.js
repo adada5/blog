@@ -9,22 +9,22 @@ import { addComment,getComment } from '@/network/comment'
 import jsonp from '@/util/jsonp'
 
 export default {
+  // 获取评论
   async getCommentList({commit, rootState}) {
     const res = await getComment(rootState.blogId)
     commit(SAVE_COMMENT_RESULT,res.data)
     console.log(res)
   },
+  // 提交评论
   submitCommentForm({rootState, dispatch, commit}){
     let form = {...rootState.commentForm}
     form.img = ''
+    //被回复的评论id
     let id = rootState.parentCommentId
     //判断是否qq号的正则表达式
     const reg = /^[1-9][0-9]{4,10}$/
+    //获取博客id
     form.blogId = rootState.blogId
-
-    const portraitCallBack = function(data){
-      console.log(data)
-    }
 
     console.log('评论的名称',form.nickname) 
     console.log('是否为qq号：',reg.test(form.nickname))

@@ -1,4 +1,3 @@
-// var webpack=require("webpack")
 
 module.exports = {
   "presets": [
@@ -12,13 +11,5 @@ module.exports = {
         "styleLibraryName": "theme-chalk"
       }
     ]
-    // ,
-    // [
-    //   　　new webpack.optimize.CommonsChunkPlugin('common.js'),
-    //   　　new webpack.ProvidePlugin({
-    //   　　　　jQuery: "jquery",
-    //   　　　　$: "jquery"
-    //   　　})
-    // ]
   ]
 }

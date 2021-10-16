@@ -1,7 +1,6 @@
 <template>
   <div>
-    <el-form :model="data" ref="editFormRef" label-position="top">   
-      
+    <el-form :model="data" ref="editFormRef" label-position="top">         
       <el-form-item label="修改时间" > 
         {{data.updateTime | dateFormat}}
       </el-form-item>

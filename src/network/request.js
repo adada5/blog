@@ -9,8 +9,6 @@ export function request(config){
     })
 
     instance.interceptors.request.use(config => {
-      //填加登录获取的token
-      config.headers.Authorization = window.localStorage.getItem('token') 
       return config
     },
     err => {

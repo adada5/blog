@@ -3,7 +3,7 @@
 		<!-- 头部 -->
 		<div class="ui top attached segment" style="text-align: center">
 			<h2 class="m-text-500">文章归档</h2>
-			<p>好! 目前共计 {{ count }} 篇日志。 继续努力。</p>
+			<p> 目前共计 {{ count }} 篇博客。</p>
 		</div>
 
 		<!-- 主体 -->

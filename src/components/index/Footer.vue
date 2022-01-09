@@ -1,13 +1,14 @@
 <template>
-	<footer class="ui inverted vertical segment m-padded-tb-large m-opacity">
+	<!-- <footer class="ui inverted vertical segment m-padded-tb-large m-opacity"> -->
+    <footer class="m-padded-tb-large">
 		<!-- center aligned文字居中 -->
-    <div class="ui center aligned container">
+    <!-- <div class="ui center aligned container"> -->
       <!-- gird分成16份 divided分割-->
-      <div class="ui divided inverted stackable grid">
+      <!-- <div class="ui divided inverted stackable grid">
         <div class="three wide column">
-          <h4 class="ui inverted header m-text-thin m-text-spaced" >blog</h4>
+          <h4 class="ui inverted header m-text-thin m-text-spaced" >blog</h4> -->
           <!-- 竖直列表 -->
-          <div class="ui inverted link list">
+          <!-- <div class="ui inverted link list">
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
@@ -15,18 +16,18 @@
         </div>
 
         <div class="three wide column">
-          <h4 class="ui inverted header m-text-thin m-text-spaced" >blog</h4>
+          <h4 class="ui inverted header m-text-thin m-text-spaced" >blog</h4> -->
           <!-- 竖直列表 -->
-          <div class="ui inverted link list">
+          <!-- <div class="ui inverted link list">
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
           </div>
         </div>
         <div class="three wide column">
-          <h4 class="ui inverted header m-text-thin m-text-spaced">blog</h4>
+          <h4 class="ui inverted header m-text-thin m-text-spaced">blog</h4> -->
           <!-- 竖直列表 -->
-          <div class="ui inverted link list">
+          <!-- <div class="ui inverted link list">
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
             <a href="#" class="item">-</a>
@@ -38,8 +39,8 @@
           </p>
         </div>
       </div>
-      <div class="ui inverted section divider"></div>
-      <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright 2020 - 2021</p>
+      <div class="ui inverted section divider"></div> -->
+      <p class="m-text-thin m-text-spaced">Copyright      2020 - 2021</p>
     </div>
 	</footer>
 </template>
@@ -55,6 +56,16 @@
 	}
 </script>
 
-<style scoped>
+
+<style lang="scss" scoped>
+  footer {
+    display: flex;
+    justify-content: center;
+    background: #313232;
+    p{
+      color: rgba(255,255,255,.9);
+    }
+  }
+
 
 </style>

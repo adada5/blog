@@ -6,7 +6,7 @@ import './plugins/element.js'
 //全局css
 import './assets/css/global.css'
 //阿里icon
-import './assets/css/icon/iconfont.css'
+// import './assets/css/icon/iconfont.css'
 //typo.css
 import "./assets/css/typo.css"
 //moment 时间显示
